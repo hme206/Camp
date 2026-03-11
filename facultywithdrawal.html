@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Withdrawal Form | Paul D. Camp Community College</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+
+<div class="form-wrapper">
+
+  <!-- Header -->
+  <div class="form-header">
+    <div class="form-header-text">
+      <div class="college">Paul D. Camp Community College</div>
+      <h1>Faculty Withdrawal Form</h1>
+      <div class="revised">Revised 10/2022 &nbsp;|&nbsp; EEOC</div>
+    </div>
+    <img src="images/CampLogo.jpg" alt="Paul D. Camp Community College Logo" style="max-height:70px;border-radius:4px;flex-shrink:0;">
+    <button class="btn-reset no-print" type="button"
+      onclick="if(confirm('Reset all fields?')){document.querySelectorAll('input[type=text],input[type=date],textarea').forEach(i=>i.value='');}">
+      ↺ Reset Form
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="no-print" style="padding: 0.75rem 2.5rem 0;">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="forms.html">Forms</a></li>
+      <li><a href="maps.html">Program Maps</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-body">
+
+    <!-- Instructions -->
+    <div class="instructions" role="note">
+      Students who have been absent the equivalent of three of the first four weeks of class (75%) may be administratively withdrawn. The withdrawal form should be submitted before the academic penalty date. If form is received after penalty date the form will not be processed.
+    </div>
+
+    <!-- ── Faculty Information ── -->
+    <fieldset>
+      <legend>Faculty Information</legend>
+      <div class="field-row cols-2">
+        <div>
+          <label for="faculty-name">Name <span class="req">*</span></label>
+          <input type="text" id="faculty-name" placeholder="">
+        </div>
+        <div>
+          <label for="academic-year">Academic Year <span class="req">*</span></label>
+          <input type="text" id="academic-year" placeholder="e.g. 2025–2026">
+        </div>
+      </div>
+      <div class="field-row cols-2" style="margin-top:.75rem;">
+        <div>
+          <label for="faculty-sig">Faculty Signature <span class="req">*</span></label>
+          <input type="text" id="faculty-sig" placeholder="">
+        </div>
+        <div>
+          <label for="sig-date">Date</label>
+          <input type="date" id="sig-date">
+        </div>
+      </div>
+      <div class="field-row cols-2" style="margin-top:.75rem;">
+        <div>
+          <label for="course-begin">Course Begin Date</label>
+          <input type="date" id="course-begin">
+        </div>
+        <div>
+          <label for="course-end">Course End Date</label>
+          <input type="date" id="course-end">
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- ── Student Withdrawal Table ── -->
+    <fieldset>
+      <legend>Students to Withdraw</legend>
+      <div class="sub-table-wrap">
+        <table>
+          <colgroup>
+            <col class="col-sid">
+            <col class="col-cn">
+            <col class="col-subj">
+            <col class="col-cat">
+            <col class="col-sec">
+            <col class="col-campus">
+            <col class="col-lda">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Student ID<br>(Empl ID)</th>
+              <th>Class<br>Number</th>
+              <th>Subject</th>
+              <th>Catalog No.</th>
+              <th>Section</th>
+              <th>Campus</th>
+              <th>Last Date of<br>Attendance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 8 rows -->
+            <tr>
+              <td><input class="tbl-input" type="text" aria-label="Student ID row 1"></td>
+              <td><input class="tbl-input" type="text" aria-label="Class Number row 1"></td>
+              <td><input class="tbl-input" type="text" aria-label="Subject row 1"></td>
+              <td><input class="tbl-input" type="text" aria-label="Catalog No row 1"></td>
+              <td><input class="tbl-input" type="text" aria-label="Section row 1"></td>
+              <td><input class="tbl-input" type="text" aria-label="Campus row 1"></td>
+              <td><input class="tbl-input" type="date" aria-label="Last Date of Attendance row 1"></td>
+            </tr>
+            <tr>
+              <td><input class="tbl-input" type="text" aria-label="Student ID row 2"></td>
+              <td><input class="tbl-input" type="text" aria-label="Class Number row 2"></td>
+              <td><input class="tbl-input" type="text" aria-label="Subject row 2"></td>
+              <td><input class="tbl-input" type="text" aria-label="Catalog No row 2"></td>
+              <td><input class="tbl-input" type="text" aria-label="Section row 2"></td>
+              <td><input class="tbl-input" type="text" aria-label="Campus row 2"></td>
+              <td><input class="tbl-input" type="date" aria-label="Last Date of Attendance row 2"></td>
+            </tr>
+            <tr>
+              <td><input class="tbl-input" type="text" aria-label="Student ID row 3"></td>
+              <td><input class="tbl-input" type="text" aria-label="Class Number row 3"></td>
+              <td><input class="tbl-input" type="text" aria-label="Subject row 3"></td>
+              <td><input class="tbl-input" type="text" aria-label="Catalog No row 3"></td>
+              <td><input class="tbl-input" type="text" aria-label="Section row 3"></td>
+              <td><input class="tbl-input" type="text" aria-label="Campus row 3"></td>
+              <td><input class="tbl-input" type="date" aria-label="Last Date of Attendance row 3"></td>
+            </tr>
+            <tr>
+              <td><input class="tbl-input" type="text" aria-label="Student ID row 4"></td>
+              <td><input class="tbl-input" type="text" aria-label="Class Number row 4"></td>
+              <td><input class="tbl-input" type="text" aria-label="Subject row 4"></td>
+              <td><input class="tbl-input" type="text" aria-label="Catalog No row 4"></td>
+              <td><input class="tbl-input" type="text" aria-label="Section row 4"></td>
+              <td><input class="tbl-input" type="text" aria-label="Campus row 4"></td>
+              <td><input class="tbl-input" type="date" aria-label="Last Date of Attendance row 4"></td>
+            </tr>
+            <tr>
+              <td><input class="tbl-input" type="text" aria-label="Student ID row 5"></td>
+              <td><input class="tbl-input" type="text" aria-label="Class Number row 5"></td>
+              <td><input class="tbl-input" type="text" aria-label="Subject row 5"></td>
+              <td><input class="tbl-input" type="text" aria-label="Catalog No row 5"></td>
+              <td><input class="tbl-input" type="text" aria-label="Section row 5"></td>
+              <td><input class="tbl-input" type="text" aria-label="Campus row 5"></td>
+              <td><input class="tbl-input" type="date" aria-label="Last Date of Attendance row 5"></td>
+            </tr>
+            <tr>
+              <td><input class="tbl-input" type="text" aria-label="Student ID row 6"></td>
+              <td><input class="tbl-input" type="text" aria-label="Class Number row 6"></td>
+              <td><input class="tbl-input" type="text" aria-label="Subject row 6"></td>
+              <td><input class="tbl-input" type="text" aria-label="Catalog No row 6"></td>
+              <td><input class="tbl-input" type="text" aria-label="Section row 6"></td>
+              <td><input class="tbl-input" type="text" aria-label="Campus row 6"></td>
+              <td><input class="tbl-input" type="date" aria-label="Last Date of Attendance row 6"></td>
+            </tr>
+            <tr>
+              <td><input class="tbl-input" type="text" aria-label="Student ID row 7"></td>
+              <td><input class="tbl-input" type="text" aria-label="Class Number row 7"></td>
+              <td><input class="tbl-input" type="text" aria-label="Subject row 7"></td>
+              <td><input class="tbl-input" type="text" aria-label="Catalog No row 7"></td>
+              <td><input class="tbl-input" type="text" aria-label="Section row 7"></td>
+              <td><input class="tbl-input" type="text" aria-label="Campus row 7"></td>
+              <td><input class="tbl-input" type="date" aria-label="Last Date of Attendance row 7"></td>
+            </tr>
+            <tr>
+              <td><input class="tbl-input" type="text" aria-label="Student ID row 8"></td>
+              <td><input class="tbl-input" type="text" aria-label="Class Number row 8"></td>
+              <td><input class="tbl-input" type="text" aria-label="Subject row 8"></td>
+              <td><input class="tbl-input" type="text" aria-label="Catalog No row 8"></td>
+              <td><input class="tbl-input" type="text" aria-label="Section row 8"></td>
+              <td><input class="tbl-input" type="text" aria-label="Campus row 8"></td>
+              <td><input class="tbl-input" type="date" aria-label="Last Date of Attendance row 8"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </fieldset>
+
+    <!-- ── Office Use Only ── -->
+    <fieldset class="office-section">
+      <legend>For Office of Admission Use Only</legend>
+      <div class="sig-date-row">
+        <label for="processed-by">Processed By</label>
+        <input type="text" id="processed-by" placeholder="">
+        <label for="processed-date">Date</label>
+        <input type="date" id="processed-date">
+      </div>
+      <div style="margin-top:.75rem;">
+        <label for="office-notes" style="font-weight:700;text-transform:uppercase;font-size:.78rem;letter-spacing:.05em;color:var(--muted);">Notes</label>
+        <textarea id="office-notes" rows="2" style="margin-top:.3rem;"></textarea>
+      </div>
+    </fieldset>
+
+    <p class="req-note"><span class="req">*</span> Required fields</p>
+
+  </div><!-- /.form-body -->
+
+  <!-- Print Button -->
+  <div class="save-btn-row no-print">
+    <button class="btn-print" type="button" onclick="window.print()">Print / Save as PDF</button>
+    <p class="btn-hint">When the print dialog opens, choose <strong>Save as PDF</strong> as the destination. This form is designed to print on one page.</p>
+  </div>
+
+</div><!-- /.form-wrapper -->
+
+<style>
+  /* ── Column widths for withdrawal table ── */
+  col.col-sid    { width: 14%; }
+  col.col-cn     { width: 11%; }
+  col.col-subj   { width: 13%; }
+  col.col-cat    { width: 13%; }
+  col.col-sec    { width: 9%; }
+  col.col-campus { width: 10%; }
+  col.col-lda    { width: 16%; }
+
+  /* Single-header style (no double-row) */
+  thead tr th {
+    background: var(--navy);
+    color: #000000;
+    padding: .5rem .4rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: .8rem;
+    border: 1px solid var(--navy);
+  }
+
+  /* ── One-page print overrides ── */
+  @media print {
+    @page { size: letter portrait; margin: .35in .45in .35in .45in; }
+
+    html, body { font-size: 11px !important; }
+
+    .form-header { padding: .3rem .5rem; }
+    .form-header h1 { font-size: 1.1rem; }
+    .form-header img { max-height: 52px; }
+
+    .form-body { padding: .3rem .5rem; }
+
+    .instructions {
+      display: block !important;
+      padding: .4rem .6rem;
+      margin-bottom: .5rem;
+      font-size: .72rem;
+    }
+
+    fieldset { padding: .3rem .5rem; margin-bottom: .4rem; }
+    legend { font-size: .65rem; }
+    label  { font-size: .65rem; margin-bottom: .1rem; }
+
+    .field-row { gap: .2rem .5rem; margin-top: .25rem; }
+    input[type="text"], input[type="date"], textarea {
+      padding: .15rem .3rem;
+      font-size: .78rem;
+    }
+    textarea { min-height: 28px; }
+
+    table { font-size: .72rem; }
+    thead tr th { padding: .2rem .25rem; font-size: .68rem; }
+    tbody td { padding: .12rem .2rem; }
+    .tbl-input { padding: .12rem .2rem; font-size: .72rem; }
+
+    .office-section { padding: .3rem .5rem; }
+    .sig-date-row input[type="text"],
+    .sig-date-row input[type="date"] { width: 130px; }
+
+    .req-note { font-size: .65rem; margin-top: .2rem; }
+  }
+</style>
+
+</body>
+</html>
